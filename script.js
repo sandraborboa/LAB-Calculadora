@@ -1,6 +1,6 @@
 // Inicio
-let a;
-let b;
+let num1 = "10";
+let num2 = "20";
 
 // Función para sumar
 function add(a, b) {
@@ -23,7 +23,7 @@ function divide(a, b) {
 }
 
 // Se asigna el return de la función a la variable result
-let result = divide(10, 5);
+let result = add(num1, num2);
 
 // Se imprime el resultado en la consola
 console.log(result);
