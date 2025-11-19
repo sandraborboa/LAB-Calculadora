@@ -1,31 +1,53 @@
+
 // Inicio
-let num1 = "10";
-let num2 = "20";
+let num1 = parseFloat(prompt("Introduzca el primer número: \n"));
+let num2 = parseFloat(prompt("Introduzca el siguiente número: \n"));
+let operacion = prompt("¿Qué operación deseas realizar? ( + │ - │ * │ / )")
 
-// Función para sumar
+// Funciones para operaciones
 function add(a, b) {
-    return a + b;
-}
+        return a + b;
+    }
+    
+function subtract(a, b) {
+        return a - b;
+    }
 
-// Función para restar
-function subtrack(a, b) {
-    return a - b;
-}
-
-// Función para multiplicar
 function multiply(a, b) {
-    return a * b;
-}
+        return a * b;
+    }
 
-// Función para dividir
 function divide(a, b) {
-    return a / b;
-}
+        // Verificar que num2 no sea 0
+        if (b == 0) {
+            return "No se puede dividir entre 0.";
+        }
+        else {
+            return a / b;
+        }
+    }
 
-// Se asigna el return de la función a la variable result
-let result = add(num1, num2);
+switch (operacion) {
+
+    case "+":
+        result = add(num1, num2);
+        break;
+
+    case "-":
+        result = subtract(num1, num2);
+        break;
+    
+    case "*":
+        result = multiply(num1, num2);
+        break;
+
+    case "/":
+        result = divide(num1, num2);
+        break;
+    
+}
 
 // Se imprime el resultado en la consola
-console.log(result);
+console.log(`Resultado: ${result}`);
 
 // Fin
